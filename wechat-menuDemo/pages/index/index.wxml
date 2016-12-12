@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="nav">
+    <view class="nav-c nav-c1 {{navOpen1?'active':''}}" data-id="1" catchtap="tapHandler">区域</view>
+    <view class="nav-c nav-c2 {{navOpen2?'active':''}}" data-id="2" catchtap="tapHandler">女装</view>
+    <view class="nav-c nav-c3 {{navOpen3?'active':''}}" data-id="3" catchtap="tapHandler">排序</view>
+  </view>
+  <view class="box {{navOpen2?'slidown':'slidup'}}" style="display: {{navDisable2?'blcok':'none'}}">
+    <block wx:for="{{nv}}" wx:key="nv">
+      <view>{{item}}</view>
+    </block>
+  </view>
+  <view class="box {{navOpen3?'slidown':'slidup'}}" style="display: {{navDisable3?'blcok':'none'}}">
+    <block wx:for="{{px}}" wx:key="px">
+      <view>{{item}}</view>
+    </block>
+  </view>
+  <view class="fullbg {{navOpen1 ?'fullopacity':''}}{{navOpen2 ?'fullopacity':''}}{{navOpen3 ?'fullopacity':''}}" bindtap="hidebg"></view>
+</view>
