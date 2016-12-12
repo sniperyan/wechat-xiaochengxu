@@ -1,0 +1,2 @@
+/* pages/popular/popular.wxss */
+@import "../../component/filmList/filmList.wxss";

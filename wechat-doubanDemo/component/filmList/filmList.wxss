@@ -1,0 +1,73 @@
+.scroll-view{
+  height: 1400rpx;
+}
+.film-scroll-view{
+  box-sizing: border-box;
+  width: 750rpx;
+  padding: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-shadow: 0 0 40rpx #f4f4f4 inset;
+
+}
+.filmItem{
+  width: 350rpx;
+  margin: 0 5rpx 20rpx 5rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0 20rpx 40rpx #eee;
+  overflow: hidden;
+  animation: fadeIn 1s;
+  position: relative;
+}
+.file-cover-image{
+  width: 350rpx;
+  height: 508rpx;
+}
+.film-rating{
+  box-sizing: border-box;
+  position: absolute;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: right;
+  padding-right: 20rpx;
+  font-size: 24rpx;
+  width: 100%;
+  left: 0;
+  top:458rpx;
+  background-color: rgba(0, 0, 0, .65);
+  color: #fff;
+}
+.film-title{
+  padding: 16rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.film-tag{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10rpx 0 20rpx 16rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+.film-tag-item {
+  padding: 4rpx 6rpx;
+  margin-right: 10rpx;
+  font-size: 24rpx;
+  box-shadow: 0 0 0 1px #ccc;
+  border-top: 1px solid #fff;
+  border-radius: 10rpx;
+  background-color: #fafafa;
+  color: #666;
+}
+.loading-tip{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ccc;
+}

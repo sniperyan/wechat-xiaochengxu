@@ -1,0 +1,17 @@
+<!--
+    message模板
+    message:{
+        visiable是否可见
+        icon 图标类型 三种值 info success warning
+        content提示内容
+    }
+
+-->
+<template name="message">
+<block wx:if="{{visiable}}">
+    <view class="message">
+        <image class="message-image" src="../../dist/images/weui-{{icon}}-icon.png"></image>
+        <view class="message-content">{{content}}</view>
+    </view>
+</block>
+</template>

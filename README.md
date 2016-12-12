@@ -5,6 +5,6 @@
 
 ## 主要内容
 
-1. [豆瓣微信小程序](./wechat-douban/README.md)
+1. [豆瓣微信小程序](../../tree/master/wechat-doubanDemo/README.md)
 2. [小程序下拉菜单效果](../../tree/master/wechat-menuDemo/README.md)
 

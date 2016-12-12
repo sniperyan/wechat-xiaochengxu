@@ -1,0 +1,2 @@
+/* pages/searchResult/searchResult.wxss */
+@import "../../component/filmList/filmList.wxss";
