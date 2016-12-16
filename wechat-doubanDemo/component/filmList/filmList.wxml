@@ -3,14 +3,8 @@
     showLoading:第一次加载loading状态 boolean
 -->
 <template name="filmList">
-<block wx:if="{{showLoading}}">
-    <view class="loading">
-        <image class="loading-image" src="../../dist/images/loading.gif"></image>
-        <view class="loading-content">玩命加载中...</view>
-    </view>
-</block>
-<block wx:else>
-    <scroll-view class="scroll-view" scroll-y="true" bindscroll="scrollEventHandle" bindscrolltolower="scrolltolowerEventHandle">
+<block wx:if="{{!showLoading}}">
+    <scroll-view style="height: {{windowHeight}}rpx" scroll-y="true" bindscroll="scrollEventHandle" bindscrolltolower="scrolltolowerEventHandle">
         <view class="film-scroll-view">
             <view class="filmItem" wx:for="{{films}}" wx:for-index="filmIndex" wx:for-item="filmItem" wx:key="{{filmItem.id}}" data-id="{{filmItem.id}}" catchtap="detailTap">
                 <image class="file-cover-image" src="{{filmItem.images.large}}"></image>

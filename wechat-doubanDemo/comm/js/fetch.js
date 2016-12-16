@@ -6,6 +6,11 @@ module.exports = {
         var that = this
         var {hasMore, start, showLoading, films} = that.data
         if (hasMore) {
+            wx.showToast({
+                title: '玩命加载中...',
+                icon: 'loading',
+                duration: 10000
+            })
             wx.request({
                 url: url,
                 data: {
@@ -55,6 +60,7 @@ module.exports = {
                 },
                 complete: function () {
                     // complete
+                    wx.hideToast()
                 }
             })
         }
@@ -63,6 +69,11 @@ module.exports = {
     //获取电影详情
     fetchFilmDetail: function (url, id, cb) {
         var that = this;
+        wx.showToast({
+            title: '玩命加载中...',
+            icon: 'loading',
+            duration: 10000
+        })
         wx.request({
             url: url + id,
             method: 'GET',
@@ -90,6 +101,10 @@ module.exports = {
                     icon: 'warning',
                     duration: 3000
                 })
+            },
+            complete: function () {
+                // complete
+                wx.hideToast()
             }
         })
 
@@ -97,6 +112,11 @@ module.exports = {
     //获取人物详情
     fetchPersonDetail:function (url, id, cb) {
         var that = this;
+        wx.showToast({
+            title: '玩命加载中...',
+            icon: 'loading',
+            duration: 10000
+        })
         wx.request({
             url: url + id,
             method: 'GET',
@@ -126,6 +146,10 @@ module.exports = {
                     icon: 'warning',
                     duration: 3000
                 })
+            },
+            complete: function () {
+                // complete
+                wx.hideToast()
             }
         })
 
@@ -135,6 +159,11 @@ module.exports = {
         var {url,hasMore, start, showLoading, keyword,films} = that.data
         url = decodeURIComponent(url)
         if (hasMore) {
+            wx.showToast({
+                title: '玩命加载中...',
+                icon: 'loading',
+                duration: 10000
+            })
             wx.request({
                 url: url + keyword,
                 data: {
@@ -173,6 +202,10 @@ module.exports = {
                         icon: 'warning',
                         duration: 3000
                     })
+                },
+                complete: function () {
+                    // complete
+                    wx.hideToast()
                 }
             })
         }

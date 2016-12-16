@@ -1,11 +1,6 @@
 <!--pages/personDetail/personDetail.wxml-->
-<block wx:if="{{showLoading}}">
-    <view class="loading">
-        <image class="loading-image" src="../../dist/images/loading.gif"></image>
-        <view class="loading-content">玩命加载中...</view>
-    </view>
-</block>
-<block wx:elif="{{showContent}}">
+
+<block wx:if="{{!showLoading && showContent}}">
     <!-- pd: person detail -->
     <view class="pd-hd">
         <view class="pd-hd-bg" style="background-image: url({{personDetail.avatars.medium}})"></view>

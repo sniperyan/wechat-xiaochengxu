@@ -3,11 +3,16 @@ var fetch = require('../../comm/js/fetch')
 var url = 'https://api.douban.com/v2/movie/in_theaters'
 var searchByTagUrl = 'https://api.douban.com/v2/movie/search?tag='
 Page({
+    /**
+     * showLoading 只用于第一页的loading状态判断
+     * windowHeight： 获取窗口高度，用于给scroll-view加高度,竖向滚动时不加高度没法触发事件
+     */
     data: {
         showLoading: true,
         hasMore: true,
         start: 0,
-        films: []
+        films: [],
+        windowHeight: 0
     },
     onLoad: function (options) {
         // 页面初始化 options为页面跳转所带来的参数
@@ -18,6 +23,14 @@ Page({
     },
     onShow: function () {
         // 页面显示
+        var that = this
+        wx.getSystemInfo({
+            success: function(res) {
+                that.setData({
+                    windowHeight: res.windowHeight*2
+                })
+            }
+        })
     },
     onHide: function () {
         // 页面隐藏

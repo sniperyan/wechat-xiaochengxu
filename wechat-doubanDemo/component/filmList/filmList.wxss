@@ -1,6 +1,3 @@
-.scroll-view{
-  height: 1400rpx;
-}
 .film-scroll-view{
   box-sizing: border-box;
   width: 750rpx;

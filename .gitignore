@@ -38,3 +38,6 @@ jspm_packages
 
 # mac os 
 .DS_Store
+
+# webstorm
+.idea
